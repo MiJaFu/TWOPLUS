@@ -1,0 +1,122 @@
+<!--pages/zhuanlan/zhuanlan.wxml-->
+<view id="fix_top" catchtap='clickFix_top'>
+    <view>
+        <view class="option {{current == 0?'fontColor':''}}" data-current='0' bindtap='clickOption'>
+            <text>排序</text>
+            <!-- <icon></icon> -->
+        </view>
+        <view class="option {{current == 1?'fontColor':''}}" data-current='1' bindtap='clickOption'>
+            <text>品牌</text>
+            <!-- <icon></icon> -->
+        </view>
+        <view class="option {{current == 2?'fontColor':''}}" data-current='2' bindtap='clickOption'>
+            <text>品类</text>
+            <!-- <icon></icon> -->
+        </view>
+        <view class="option {{current == 3?'fontColor':''}}" data-current='3' bindtap='clickOption'>
+            <text>筛选</text>
+            <!-- <icon></icon> -->
+        </view>
+    </view>
+
+    <view id='optionMenu' class='{{display == "block"?"block":"hidden"}}'>
+        <!--排序  -->
+        <view class='rank {{current == 0 ? "active" : ""}}'>
+            <text catchtap='display_hidden' data-rank="0" class='{{rank == 0?"fontColor":""}}'>更新时间</text>
+            <text catchtap='display_hidden' data-rank="1" class='{{rank == 1?"fontColor":""}}'>价格由高到低</text>
+            <text catchtap='display_hidden' data-rank="2" class='{{rank == 2?"fontColor":""}}'>价格由低到高</text>
+            <text catchtap='display_hidden' data-rank="3" class='{{rank == 3?"fontColor":""}}'>人气</text>
+        </view>
+        <!--按品牌  -->
+
+        <view class='for-brand {{current == 1 ? "active" : ""}}'>
+            <scroll-view scroll-y="true">
+                <block wx:for="{{brand}}" wx:key="{{index}}">
+                    <text wx:for="{{brand[index].brands}}" wx:for-index="idx" wx:for-item="ite" wx:key="{{idx}}" data-brand="{{ite.id}}" catchtap='brand' class='{{brandArr[ite.id] == ite.id ? "fontColor":""}} {{idx}}'>{{ite.name}}</text>
+                </block>
+            </scroll-view>
+            <view class='button'>
+                <button class='reset' catchtap="reset">重置</button>
+                <button class='submit' catchtap='brandSubmit'>确定</button>
+            </view>
+        </view>
+
+
+        <scroll-view scroll-y="true">
+            <!--按类目  -->
+            <view class='for-category {{current == 2 ? "active" : ""}}'>
+                <view class='category'>
+                    <view class='aside'>
+                        <block wx:for="{{optionCate}}" wx:key="{{index}}">
+                            <text data-bigcategory='{{index}}' bindtap='bigcategory' class='{{bigCategoryNum == index ? "fontColor":""}}'>{{item.name}}</text>
+                        </block>
+                    </view>
+                    <scroll-view class='detail' scroll-y="true">
+                        <block wx:for="{{smallCategory}}" wx:key="{{index}}">
+                            <text data-category="{{item.id}}" data-id="{{item.id}}" catchtap='smallcategory' class='{{choosecategory[item.id] == item.id ? "fontColor":""}}'>{{item.name}}</text>
+                        </block>
+                    </scroll-view>
+                </view>
+                <view class='button'>
+                    <button class='reset' catchtap='reset'>重置</button>
+                    <button class='submit' catchtap='cateSubmit'>确定</button>
+                </view>
+            </view>
+        </scroll-view>
+        <scroll-view scroll-y="true">
+            <!--筛选  -->
+            <view class='for-other {{current == 3 ? "active" : ""}}'>
+                <view>
+                    <text class='title'>适用人群</text>
+                    <view class='other-option'>
+                        <text catchtap='other_gender' data-gender="0" class='{{screenData.gender == 0?"border":""}}'>男性</text>
+                        <text catchtap='other_gender' data-gender="1" class='{{screenData.gender == 1?"border":""}}'>女性</text>
+                        <text catchtap='other_gender' data-gender="2" class='{{screenData.gender == 2?"border":""}}'>中性</text>
+                    </view>
+                </view>
+                <view>
+                    <text class='title'>价格区间</text>
+                    <view class='other-option'>
+                        <text catchtap='other_price' data-price="0" data-minPrice="0" data-maxPrice="1000" class='{{screenData.price == 0?"border":""}}'>￥1000以下</text>
+                        <text catchtap='other_price' data-price="1" data-minPrice="1000" data-maxPrice="5000" class='{{screenData.price == 1?"border":""}}'>￥1000-5000</text>
+                        <text catchtap='other_price' data-price="2" data-minPrice="5000" data-maxPrice="10000" class='{{screenData.price == 2?"border":""}}'>￥5000-1万</text>
+                        <text catchtap='other_price' data-price="3" data-minPrice="10000" data-maxPrice="20000" class='{{screenData.price == 3?"border":""}}'>￥1万-2万</text>
+                        <text catchtap='other_price' data-price="4" data-minPrice="20000" data-maxPrice="100000" class='{{screenData.price == 4?"border":""}}'>￥2万-10万</text>
+                        <text catchtap='other_price' data-price="5" data-minPrice="100000" data-maxPrice="999999999" class='{{screenData.price == 5?"border":""}}'>￥10万以上</text>
+                    </view>
+                </view>
+                <view>
+                    <text class='title'>成色</text>
+                    <view class='other-option'>
+                        <block wx:for="{{chengse}}" wx:key="{{index}}">
+                            <text catchtap='other_chengse' data-id="{{item.id}}" class='{{screenData.chengse == item.id?"border":""}}'>{{item.name}}</text>
+                        </block>
+                    </view>
+                </view>
+                <view class='button'>
+                    <button class='reset' catchtap='reset'>重置</button>
+                    <button class='submit' catchtap='screen'>确定</button>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+</view>
+
+<view class='shade {{ display == "block"? "block" : "hidden"}}' bindtap='shade'></view>
+
+<scroll-view scroll-y="true" bindscrolltolower="lower" class='goodsScroll'>
+    <view id="goodsList">
+        <block wx:for="{{goodsList}}" wx:key="{{index}}">
+            <view class="good navigator" bindtap='togoodsDetail' data-goods="{{item.id}}">
+                <span class="{{item.price-item.nowPrice}}==0?'hide':''">降价{{item.price-item.nowPrice}}</span>
+                <view>
+                    <image src='{{item.headImg}}'></image>
+                    <!-- <text>{{item.title}}</text> -->
+                    <text>{{item.title}}</text>
+                    <text class="price">￥{{item.price}}</text>
+                </view>
+                <image class='collect' src='{{item.love == 0?redlove:love}}' catchtap='love' data-love="{{index}}"></image>
+            </view>
+        </block>
+    </view>
+</scroll-view>

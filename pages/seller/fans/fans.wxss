@@ -1,0 +1,34 @@
+/* pages/seller/fans/fans.wxss */
+.fansView {
+    padding: 12rpx 0 16rpx 36rpx;
+    overflow: hidden;
+    border: 1rpx solid #dedede;
+    box-sizing: border-box;
+}
+.fansView image{
+    margin-right: 20rpx;
+    float: left;
+    width: 80rpx;
+    height: 80rpx;
+    background-color: #aaa;
+    border-radius: 50%;
+
+}
+.fansView>view{
+    float: left;
+    font-size: 24rpx;
+}
+.fansView>view .vip_grade{
+    margin-left: 20rpx;
+    display: inline-block;
+    width: 90rpx;
+    height: 28rpx;
+    line-height: 28rpx;
+    text-align: center;
+    font-size: 18rpx;
+    color: #fff;
+    border-radius: 10rpx;
+}
+.fansView>view view:last-child{
+    line-height: 52rpx;
+}

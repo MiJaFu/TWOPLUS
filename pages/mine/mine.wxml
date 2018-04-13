@@ -1,0 +1,47 @@
+<!--pages/mine/mine.wxml-->
+<view id='user_info'>
+    <view class='user-img'>
+        <image src='{{user.avatarUrl}}'></image>
+        <text>普通会员</text>
+    </view>
+    <text>{{user.nickName}}</text>
+</view>
+<view id='menu'>
+    <view class='order'>
+        <view class='your-order' >
+            <text>我的订单</text>
+            <text data-current='6' bindtap='order'>更多订单</text>
+            <image src='../../image/icons/go.png'></image>
+        </view>
+        <view class='option'>
+            <view class='option-pay' data-current='0' bindtap='order'>
+                <image src='../../image/icons/readyPay.png'></image>
+                <text>待付款</text>
+            </view>
+            <view class='option-send' data-current='1' bindtap='order'>
+                <image src='../../image/icons/readySend.png'></image>
+                <text>待发货</text>
+            </view>
+            <view class='option-recieve' data-current='2' bindtap='order'>
+                <image src='../../image/icons/recieve.png'></image>
+                <text>待收货</text>
+            </view>
+            <view class='option-refund' data-current='4' bindtap='order'>
+                <image src='../../image/icons/tuikuan.png'></image>
+                <text>退款</text>
+            </view>
+        </view>
+    </view>
+    <view class='adress' bindtap='address'>
+        <text>收货地址</text>
+        <image class='image'></image>
+    </view>
+    <view class='help' bindtap='help'>
+        <text>我要帮助</text>
+        <image class='image'></image>
+    </view>
+    <view class='call' bindtap='call'>
+        <text>联系客服</text>
+        <image class='image'></image>
+    </view>
+</view>

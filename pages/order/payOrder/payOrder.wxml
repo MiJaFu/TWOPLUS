@@ -1,0 +1,61 @@
+<!--pages/order/payOrder/payOrder.wxml-->
+<view class='option'>
+    <view>
+        <text>支付金额：</text>
+        <text class='price'>￥1000000.00</text>
+    </view>
+    <view>
+        <text>请选择支付方式</text>
+    </view>
+    <view class='payWay'>
+        <view>
+            <image src='../../../image/icons/zhifubao.png' class='icon'></image>
+            <text>支付宝支付</text>
+            <image src='{{current == 0?redchecked:checked}}' class='checked' data-current='0' bindtap='checked'></image>
+        </view>
+    </view>
+    <view class='payWay'>
+        <view>
+            <image src='../../../image/icons/weixin.png' class='icon'></image>
+            <text>微信支付</text>
+            <image src='{{current == 1?redchecked:checked}}' class='checked' class='checked' data-current='1' bindtap='checked'></image>
+        </view>
+    </view>
+
+</view>
+<view class='shuoming'>
+    <text>限额说明</text>
+    <span bindtap="shuoming">?</span>
+</view>
+
+<view class='shuomingContent {{shuoming ? "block":""}}'>
+    <image class='close' bindtap='close' src='../../../image/icons/close.png'></image>
+    <view class='zhifu'>
+        <view>
+            <image src='../../../image/icons/zhifubao.png'></image>
+            <text>支付宝支付</text>
+        </view>
+        <view>余额：无限额</view>
+        <view>银行：￥5000-￥15000 根据绑定的银行卡而定</view>
+    </view>
+    <view class='zhifu'>
+        <view>
+            <image src='../../../image/icons/weixin.png'></image>
+            <text>微信支付</text>
+        </view>
+        <view>余额：无限额</view>
+        <view>银行：￥5000-￥15000 根据绑定的银行卡而定</view>
+    </view>
+
+    <view class='kefu'>
+        <image src='../../../image/icons/kefu.png'></image>
+        <text>如果遇上支付问题可直接联系我们的客服</text>
+    </view>
+</view>
+<view class='shade {{shuoming ? "block":""}}' bindtap='close'></view>
+
+<view class='button' catchtouchend='pay'>
+    <view>立即支付</view>
+    <text>剩余支付时间</text>
+    <text>{{h}}：{{m}}</text>
+</view>

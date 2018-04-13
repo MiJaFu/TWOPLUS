@@ -1,0 +1,180 @@
+scroll-view {
+    height: 1111rpx;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    padding-left: 40rpx;
+    box-sizing: border-box;
+}
+
+#swiperImg {
+    width: 750rpx;
+    height: 384rpx;
+}
+
+swiper {
+    height: 384rpx;
+}
+
+#nav {
+    width: 750rpx;
+    height: 148rpx;
+}
+
+#nav .navigator {
+    float: left;
+    padding: 0 60rpx;
+    width: 25%;
+    height: 148rpx;
+    font-size: 24rpx;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#nav .navigator image {
+    margin-top: 34rpx;
+    width: 52rpx;
+    height: 52rpx;
+}
+
+#category {
+    padding: 20rpx 20rpx 0;
+    width: 750rpx;
+    height: 372rpx;
+    box-sizing: border-box;
+}
+
+#category .navigator {
+    float: left;
+    padding: 38rpx 0;
+    width: 50%;
+    height: 166rpx;
+    background-color: #bbb;
+    box-sizing: border-box;
+}
+
+#category .navigator:nth-child(3n+1) {
+    background-color: #f2f2f2;
+}
+
+#category .navigator icon {
+    margin-top: 10rpx;
+    display: inline-block;
+    width: 10rpx;
+    height: 70rpx;
+    background-color: #ec6065;
+}
+
+#category .navigator text {
+    margin-top: 6rpx;
+    margin-left: 14rpx;
+    display: inline-block;
+    color: #101010;
+    font-size: 28rpx;
+    width: 46rpx;
+    height: 70rpx;
+    line-height: 40rpx;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+
+#category .navigator image {
+    margin-left: 108rpx;
+    width: 90rpx;
+    height: 90rpx;
+    background-color: #ec6065;
+    vertical-align: top;
+}
+
+#recommend {
+    padding-left: 40rpx;
+    width: 750rpx;
+    min-height: 700rpx;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+#recommend scroll-view, #recommend .replace {
+    width: 750rpx;
+    height: 78rpx;
+    line-height: 78rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+#recommend .replace {
+    display: none;
+}
+
+#recommend scroll-view view {
+    display: inline-block;
+    width: 120rpx;
+    height: 48rpx;
+    font-size: 28rpx;
+    /* overflow-x: hidden; */
+}
+
+#goodsList {
+    margin-bottom: 100rpx;
+    overflow: hidden;
+}
+
+#goodsList .good {
+    position: relative;
+    float: left;
+    margin-right: 26rpx;
+    margin-bottom: 48rpx;
+    width: 320rpx;
+    background-color: #f2f2f2;
+}
+
+#goodsList .good  span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 136rpx;
+    height: 52rpx;
+    line-height: 52rpx;
+    text-align: center;
+    font-size: 24rpx;
+    color: #fff;
+}
+
+#goodsList .good .collect {
+    position: absolute;
+    bottom: 20rpx;
+    right: 36rpx;
+    width: 40rpx;
+    height: 40rpx;
+}
+
+#goodsList .good image {
+    margin-bottom: 10rpx;
+    width: 320rpx;
+    height: 320rpx;
+    vertical-align: middle;
+}
+
+#goodsList .good text {
+    display: block;
+    padding-left: 10rpx;
+    width: 100%;
+    line-height: 46rpx;
+    color: #101010;
+    font-size: 24rpx;
+    overflow: hidden; /*内容超出后隐藏*/
+    text-overflow: ellipsis; /* 超出内容显示为省略号*/
+    white-space: nowrap; /*文本不进行换行*/
+    box-sizing: border-box;
+}
+
+#goodsList .good .price {
+    font-size: 28rpx;
+    color: #ec6065;
+}

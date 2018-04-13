@@ -1,0 +1,100 @@
+/* pages/order/wuliu/wuliu.wxss */
+
+.goods {
+    margin-top: 28rpx;
+    width: 750rpx;
+}
+
+.goods .seller {
+    padding: 0 20rpx;
+    width: 100%;
+    height: 62rpx;
+    line-height: 55rpx;
+    border-top: 1rpx solid #cecece;
+    border-bottom: 1rpx solid #cecece;
+    box-sizing: border-box;
+}
+
+.goods .seller .seller-name {
+    margin-right: 10rpx;
+    font-size: 24rpx;
+    font-weight: bold;
+}
+
+.goods .seller span {
+    display: inline-block;
+    width: 106rpx;
+    height: 34rpx;
+    line-height: 34rpx;
+    text-align: center;
+    color: #fff;
+    font-size: 20rpx;
+    vertical-align: middle;
+}
+
+.goods .seller text:last-child {
+    float: right;
+    font-size: 24rpx;
+    line-height: 60rpx;
+}
+
+.goodsInfo {
+    padding: 0 26rpx 26rpx 20rpx;
+}
+
+.goodsInfo .goodsList {
+    padding: 16rpx 0;
+    border-bottom: 1rpx solid #cecece;
+}
+
+.goodsList view {
+    overflow: hidden;
+}
+
+.goodsInfo image {
+    margin-right: 26rpx;
+    float: left;
+    width: 120rpx;
+    height: 120rpx;
+    background-color: #999;
+}
+
+.goodsList text {
+    display: block;
+    font-size: 24rpx;
+}
+
+.goodsList .count {
+    font-size: 28rpx;
+}
+
+.goodsList .count, .goodsList .price {
+    text-align: right;
+    line-height: 46rpx;
+}
+
+.Settlement {
+    text-align: right;
+    font-size: 24rpx;
+    line-height: 56rpx;
+}
+
+.wuliu{
+    padding: 22rpx 0 0 28rpx;
+    border-top: 1rpx solid #cecece;
+    box-sizing: border-box;
+}
+.wuliu view{
+    font-size: 24rpx;
+    color: #000;
+}
+.wuliu .title {
+    margin-bottom: 20rpx;
+    font-size: 28rpx;
+}
+.wuliu .company{
+    color: #aaa;
+}
+.wuliu  .num{
+    margin-bottom: 20rpx;
+}

@@ -1,0 +1,68 @@
+<!--pages/help/help.wxml-->
+<view class='mian'>
+    <b class="h2">
+        <!-- <icon>?</icon> -->
+        <span>买家帮助</span>
+    </b>
+    <view class="buy">
+        <view>
+            <navigator url="./helpDetail/helpDetail?current=1&&title=常见问题">常见问题
+                <image src='../../image/icons/Page 1 Copy 11@2x.png'></image>
+            </navigator>
+        </view>
+        <view>
+            <navigator url="./helpDetail/helpDetail?current=2&&title=新手指南">新手指南
+                <image src='../../image/icons/Page 1 Copy 11@2x.png'></image>
+            </navigator>
+        </view>
+        <view>
+            <navigator url="./helpDetail/helpDetail?current=3&&title=商品问题">商品问题
+                <image src='../../image/icons/Page 1 Copy 11@2x.png'></image>
+            </navigator>
+        </view>
+        <view>
+            <navigator url="./helpDetail/helpDetail?current=4&&title=订单问题">订单问题
+                <image src='../../image/icons/Page 1 Copy 11@2x.png'></image>
+            </navigator>
+        </view>
+        <view>
+            <navigator url="./helpDetail/helpDetail?current=5&&title=售后服务">售后服务
+                <image src='../../image/icons/Page 1 Copy 11@2x.png'></image>
+            </navigator>
+        </view>
+        <view>
+            <navigator url="./helpDetail/helpDetail?current=6&&title=养护服务">养护服务
+                <image src='../../image/icons/Page 1 Copy 11@2x.png'></image>
+            </navigator>
+        </view>
+        <view>
+            <navigator url="./helpDetail/helpDetail?current=7&&title=防骗公告">防骗公告
+                <image src='../../image/icons/Page 1 Copy 11@2x.png'></image>
+            </navigator>
+        </view>
+    </view>
+    <b class="h2">
+        <!-- <icon>?</icon> -->
+        <span>卖家帮助</span>
+    </b>
+    <view class='buy'>
+        <view>
+            <navigator url="./helpDetail/helpDetail?current=8&&title=常见问题">常见问题
+                <image src='../../image/icons/Page 1 Copy 11@2x.png'></image>
+            </navigator>
+        </view>
+        <view>
+            <navigator url="./helpDetail/helpDetail?current=9&&title=卖家相关">卖家相关
+                <image src='../../image/icons/Page 1 Copy 11@2x.png'></image>
+            </navigator>
+        </view>
+    </view>
+    <view class='line'></view>
+    <view class='buy'>
+        <view>
+            <navigator url="./tel">联系客服
+               <image src='../../image/icons/Page 1 Copy 11@2x.png'></image>
+            </navigator>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,158 @@
+/* pages/order/payOrder/payOrder.wxss */
+
+page {
+    background-color: #f8f8f8;
+}
+.shade{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .3);
+    display: none;
+}
+.option {
+    width: 750rpx;
+}
+
+.option>view {
+    padding: 0 36rpx 0 30rpx;
+    width: 100%;
+    height: 82rpx;
+    line-height: 82rpx;
+    font-size: 28rpx;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.option>view .price {
+    float: right;
+    font-size: 32rpx;
+    font-weight: bold;
+    color: #000;
+}
+
+.option>view:first-child {
+    margin-bottom: 54rpx;
+}
+
+.option .payWay>view {
+    border-top: 1rpx solid #dedede;
+}
+
+.payWay .icon, .payWay .checked {
+    width: 46rpx;
+    height: 46rpx;
+    background-color: #000;
+    vertical-align: middle;
+}
+
+.payWay .checked {
+    margin-top: 17rpx;
+    float: right;
+    vertical-align: middle;
+}
+
+.shuoming {
+    padding: 0 36rpx 0 30rpx;
+    width: 100%;
+    height: 82rpx;
+    line-height: 82rpx;
+    font-size: 28rpx;
+    box-sizing: border-box;
+}
+
+.shuoming span {
+    margin-left: 10rpx;
+    display: inline-block;
+    width: 33rpx;
+    height: 33rpx;
+    line-height: 33rpx;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    background-color: #101010;
+    vertical-align: middle;
+    border-radius: 50%;
+}
+.shuomingContent{
+    padding: 20rpx 36rpx 0;
+    margin: 0 auto;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    z-index: 2;
+    transform: translateX(-50%);
+    width: 644rpx;
+    height: 496rpx;
+    background-color: #fff;
+    box-sizing: border-box;
+    display: none;
+}
+.shuomingContent .close{
+    position: absolute;
+    top: 10rpx;
+    right: 10rpx;
+    width: 50rpx;
+    height: 50rpx;
+}
+
+.shuomingContent .zhifu{
+    padding: 30rpx 0;
+    border-bottom: 1rpx solid #cecece;
+}
+.shuomingContent .zhifu image{
+    margin-right: 16rpx;
+    width: 40rpx;
+    height: 40rpx;
+    vertical-align: middle;
+}
+.shuomingContent .zhifu text,.shuomingContent .zhifu view{
+    font-size: 24rpx;
+    line-height: 46rpx;
+}
+.shuomingContent .zhifu view{
+    padding-left: 55rpx;
+}
+.shuomingContent .zhifu view:first-child{
+    padding: unset;
+}
+
+.shuomingContent .kefu image{
+    
+    width: 36rpx;
+    height: 36rpx;
+    margin-right: 10rpx;
+    margin-left: 72rpx;
+    vertical-align: middle;
+}
+.shuomingContent .kefu  text{
+    font-size: 20rpx;
+}
+.button {
+    padding: 10rpx 0;
+    margin: 0 auto;
+    width: 308rpx;
+    height: 80rpx;
+    font-size: 28rpx;
+    text-align: center;
+    color: #fff;
+    background-color: #ec6065;
+    box-sizing: border-box;
+}
+
+.button view, .button text {
+    vertical-align: middle;
+    color: #fff;
+    text-align: center;
+}
+
+.button view {
+    line-height: 31rpx;
+}
+
+.button text {
+    line-height: 46rpx;
+    font-size: 20rpx;
+}

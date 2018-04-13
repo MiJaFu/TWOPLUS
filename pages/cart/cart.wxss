@@ -1,0 +1,154 @@
+/* pages/cart/cart.wxss */
+page{
+    background-color: #f5f5f5;
+}
+.bgc {
+    background: #ec6065 !important;
+}
+
+.goodsList {
+    width: 750rpx;
+}
+
+.good {
+    width: 750rpx;
+    margin-bottom: 26rpx;
+    background-color: #fff;
+}
+
+.good:last-child {
+    /* margin-bottom: 150rpx; */
+}
+
+.good .selor-info {
+    padding-left: 50rpx;
+    padding-right: 34rpx;
+    width: 750rpx;
+    height: 70rpx;
+    line-height: 60rpx;
+    border-top: 2rpx solid #bbb;
+    border-bottom: 2rpx solid #bbb;
+    box-sizing: border-box;
+}
+
+.good .selor-info image {
+    width: 48rpx;
+    height: 48rpx;
+    background-color: #000;
+    vertical-align: middle;
+}
+
+.good .selor-info image:last-child {
+    margin-top: 14rpx;
+    float: right;
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.good .selor-info text {
+    margin: 0 10rpx;
+    font-size: 24rpx;
+    color: #101010;
+}
+
+.good .selor-info span {
+    display: inline-block;
+    width: 106rpx;
+    height: 34rpx;
+    line-height: 34rpx;
+    font-size: 20rpx;
+    text-align: center;
+    color: #fff;
+    background-color: #009688;
+}
+
+.good .good-detail {
+    padding: 28rpx 0 28rpx 50rpx;
+    position: relative;
+    width: 750rpx;
+    height: 172rpx;
+    /* border-bottom: 1rpx solid #bbb; */
+    box-sizing: border-box;
+}
+
+.good .good-detail .checkbox {
+    position: absolute;
+    top: 50%;
+    left: 34rpx;
+    transform: translateY(-50%);
+    width: 34rpx;
+    height: 34rpx;
+    background-color: #000;
+}
+
+.good .good-detail image {
+    float: left;
+    overflow: hidden;
+    margin-right: 26rpx;
+    width: 116rpx;
+    height: 116rpx;
+    vertical-align: middle;
+    background-color: #000;
+}
+
+.good .good-detail .title {
+    margin-bottom: 36rpx;
+    display: block;
+    font-size: 24rpx;
+}
+
+.good .good-detail .newPrice {
+    font-size: 32rpx;
+    font-weight: bold;
+}
+
+.good .good-detail .oldPrice {
+    font-size: 24rpx;
+    text-decoration: line-through;
+    color: #bbb;
+}
+
+.pay {
+    margin-right: 10rpx;
+    float: right;
+    display: inline-block;
+    font-size: 24rpx;
+    background-color: #ec6065;
+    color: #fff;
+    padding: 10rpx;
+    
+}
+
+.buy {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 80rpx;
+    width: 750rpx;
+    border-top: 1rpx solid #bbb;
+    /* border-bottom: 1rpx solid #bbb; */
+    background-color: #fff;
+}
+
+.buy span {
+    margin-left: 26rpx;
+    font-size: 28rpx;
+    line-height: 80rpx;
+}
+
+.buy text {
+    line-height: 80rpx;
+    font-size: 32rpx;
+    font-weight: bold;
+}
+
+.buy .submit {
+    float: right;
+    width: 188rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    font-size: 28rpx;
+    color: #fff;
+    text-align: center;
+    background-color: #ec6065;
+}

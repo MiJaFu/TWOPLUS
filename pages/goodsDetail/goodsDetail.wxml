@@ -1,0 +1,119 @@
+<!--pages/goodsDetail/goodsDetail.wxml-->
+<!--轮播图  -->
+<swiper autoplay="true" duration="500" indicator-dots="true" circular="true" interval="5000">
+    <swiper-item wx:for="{{goodInfo.swiper_img}}" wx:key="{{index}}">
+        <image src='{{item}}'></image>
+    </swiper-item>
+</swiper>
+<!--商品描述信息  -->
+<view class='goodDesc'>
+    <text class='chengse'>{{goodInfo.chengse}}</text>
+    <text class='title'>{{goodInfo.title}}</text>
+    <view>
+        <text class='newPrice'>￥{{goodInfo.newPrice}}</text>
+        <text class='oldPrice'>￥{{goodInfo.oldPrice}}</text>
+    </view>
+    <view class='describe'>
+        <b>商品描述：</b>
+        <text>{{goodInfo.goodDesc}}</text>
+    </view>
+    <!--信誉与卖家店铺  -->
+    <view>
+        <view class='credit'>
+            <view class='credit-item'>
+                <image src='../../image/icons/dunpai.png'></image>
+                <text>假货包赔</text>
+            </view>
+            <view class='credit-item'>
+                <image src='../../image/icons/dunpai.png'></image>
+                <text>权威鉴定</text>
+            </view>
+            <view class='credit-item'>
+                <image src='../../image/icons/dunpai.png'></image>
+                <text>顺丰包邮</text>
+            </view>
+            <view class='credit-item'>
+                <image src='../../image/icons/dunpai.png'></image>
+                <text>支付安全</text>
+            </view>
+        </view>
+        <view class='seller' bindtap='toseller'>
+            <view class='seller-img'>
+                <image></image>
+                <text>实名认证</text>
+            </view>
+            <view class='seller-info'>
+                <view>
+                    <text class='seller-name'>广州王小二</text>
+                    <image src='../../image/icons/redlove.png' class='seller-credit'></image>
+                </view>
+                <view>
+                    <text>在售 1000</text>
+                    <text>成交 1000</text>
+                    <text>粉丝 1000</text>
+                </view>
+            </view>
+            <image class='go' src='../../image/icons/go.png'></image>
+        </view>
+    </view>
+
+
+</view>
+
+<!--间隔  -->
+<view class='interval'></view>
+<!--商品详情  -->
+<view class='good-detail'>
+    <text>商品属性</text>
+    <view class='describe'>
+        <text>品牌：GUCCI</text>
+        <text>类目：箱包/单肩包</text>
+        <text>成色：99新</text>
+        <text>颜色：如图</text>
+        <text>尺寸：90×90×20</text>
+        <text>适用人群：女士</text>
+        <text>产地：意大利</text>
+        <text>配件：盒子、说明书、其他</text>
+    </view>
+    <view bindtap='unfold' class='unfold {{show=="hide"?"show":"hide"}}'>
+        <text>展开商品图</text>
+        <icon class='down'></icon>
+    </view>
+    <view class='goodImages {{show=="show"?"show":"hide"}}'>
+        <block wx:for="{{goodInfo.swiper_img}}" wx:key="{{index}}">
+            <image src='{{item}}'></image>
+        </block>
+    </view>
+    <view bindtap='packUp' class='packUp {{show=="show"?"show":"hide"}}'>
+        <text>收起</text>
+        <icon class='up'></icon>
+    </view>
+</view>
+
+<!--同类商品  -->
+<view class='similarProducts'>
+    <text>———— 其他同类商品 ————</text>
+    <view id="goodsList">
+        <block wx:for="{{goodsList}}">
+            <navigator class="good" url='../goodsDetail/goodsDetail'>
+                <span>降价{{item.down}}</span>
+                <view>
+                    <image src='{{item.img_url}}'></image>
+                    <text>{{item.chengse}} {{item.brand}}</text>
+                    <text>{{item.title}}</text>
+                    <text class="price">￥{{item.price}}</text>
+                </view>
+                <image class='collect' src='../../image/icons/love.png'></image>
+            </navigator>
+        </block>
+    </view>
+</view>
+<!--加入购物车  -->
+<view id='menu'>
+    <view class='buy' bindtap='buy'>立即购买</view>
+    <view class='tocart' bindtap='tocart'>
+        <image src='../../image/icons/tocart.png'></image>
+        <text>加入购物车</text>
+    </view>
+
+</view>

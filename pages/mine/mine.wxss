@@ -1,0 +1,130 @@
+/* pages/mine/mine.wxss */
+
+#user_info {
+    padding-top: 36rpx;
+    width: 750rpx;
+    height: 280rpx;
+    background-color: #555;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.user-img {
+    position: relative;
+}
+
+.user-img image {
+    margin: 0 auto;
+    display: block;
+    width: 120rpx;
+    height: 120rpx;
+    /* background-color: #fff; */
+    border-radius: 50%;
+}
+
+.user-img text {
+    position: absolute;
+    top: 100rpx;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    width: 122rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    font-size: 24rpx;
+    color: #fff;
+    text-align: center;
+    background-color: #009688;
+}
+
+#user_info>text {
+    display: block;
+    margin-top: 41rpx;
+    font-size: 32rpx;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+}
+
+.order {
+    margin-top: 10rpx;
+    width: 750rpx;
+    height: 204rpx;
+    padding: 0 30rpx;
+    box-sizing: border-box;
+}
+
+.order .your-order {
+    padding-right: 48rpx;
+    position: relative;
+    height: 72rpx;
+    line-height: 72rpx;
+    border-bottom: 1rpx solid #bbb;
+    box-sizing: border-box;
+}
+
+.order .your-order text {
+    font-size: 28rpx;
+}
+
+.order .your-order text:nth-child(2) {
+    float: right;
+}
+
+.order .your-order image {
+    position: absolute;
+    top: 25rpx;
+    right: 0;
+    width: 24rpx;
+    height: 24rpx;
+    background-color: #000;
+}
+
+.option {
+    margin-top: 20rpx;
+    width: 100%;
+    overflow: hidden;
+}
+
+.option view {
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+
+.option image {
+    margin: 0 auto;
+    display: block;
+    width: 48rpx;
+    height: 48rpx;
+    background-color: #000;
+}
+
+.option text {
+    font-size: 28rpx;
+}
+
+.adress, .help, .call {
+    position: relative;
+    padding: 0 30rpx;
+    margin-top: 10rpx;
+    width: 750rpx;
+    height: 92rpx;
+    line-height: 92rpx;
+    border-top: 1rpx solid #bbb;
+    border-bottom: 1rpx solid #bbb;
+    box-sizing: border-box;
+}
+
+.icon{
+    position: absolute;
+    top: 35rpx;
+    right: 30rpx;
+    width: 24rpx;
+    height: 24rpx;
+    background: #000;
+}
+
+ #menu view>text{
+    font-size: 28rpx;
+} 

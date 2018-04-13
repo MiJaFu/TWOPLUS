@@ -1,0 +1,63 @@
+<!--pages/category/category.wxml-->
+
+<view id="header">
+    <image src='../../image/icons/search.png'></image>
+    <text bindtouchend="clickNO1" class="{{currentTab == 0? 'active' : ''}}" data-current="0">品类</text>
+    <text bindtouchend="clickNO1" class="{{currentTab == 1? 'active' : ''}}" data-current="1">品牌</text>
+    <image src='../../image/icons/redcart.png'></image>
+</view>
+<swiper bindchange='swiper' current="{{currentTab}}">
+    <swiper-item class='category'>
+        <view id="aside">
+            <!--侧边  -->
+            <block wx:for="{{cateList}}" wx:key="{{index}}">
+                <view>
+                    <icon class="line {{asideCurrent == index ? 'active' : ''}}"></icon>
+                    <text class="{{asideCurrent == index ? 'active' : ''}}" data-current="{{index}}" bindtouchend="clickAside">{{item.name}}</text>
+                </view>
+            </block>
+        </view>
+        <scroll-view id="main" scroll-y="true" scroll-with-animation="true" scroll-into-view="{{toView}}" bindscroll="scroll">
+            <block wx:for="{{cateList}}" wx:key="{{index}}">
+                <!--大类  -->
+                <view class="category" id="cate{{index}}">
+                    <view class="top">
+                        <image src='http://p2ohl69g3.bkt.clouddn.com/o_1c621krscacj1d1h140i123t13h5a.png'></image>
+                        <text>{{item.name}}</text>
+                    </view>
+                    <!--小类  -->
+                    <block wx:for="{{item.types}}" wx:for-index="idx" wx:for-item="ite" wx:key="{{idx}}">
+                        <view class="item" bindtap='bindcate' data-cate="{{ite.id}}">
+                            <image src='{{ite.img}}'></image>
+                            <text>{{ite.name}}</text>
+                        </view>
+                    </block>
+                </view>
+            </block>
+        </scroll-view>
+    </swiper-item>
+    <swiper-item class='brand'>
+        <view class='brand-for-word'>
+            <text wx:for="{{word}}" wx:key="{{index}}" data-toview="{{index}}" catchtouchend='toview'>{{item}}</text>
+        </view>
+        <scroll-view scroll-y="true" scroll-with-animation="true" scroll-into-view="{{toword}}">
+            <text class='title know'>——— 知名品牌 ———</text>
+            <view class='knowBrand'>
+                <block wx:for="{{knowBrand}}" wx:key="{{index}}">
+                    <image></image>
+                </block>
+            </view>
+            <text class='title all'>—————— 所有品牌 ——————</text>
+            <view class='brandAll'>
+                <view class='brand' wx:for="{{allBrand}}" wx:key="{{index}}" id='{{item.word}}'>
+                    <view class='title'>{{item.word}}</view>
+                    <view wx:for="{{item.brand}}" wx:for-index="idx" wx:for-item="brand" wx:key="{{idx}}">
+                        <image></image>
+                        <text>{{brand}}</text>
+                        <icon></icon>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+    </swiper-item>
+</swiper>

@@ -1,0 +1,25 @@
+<!--pages/cart/cart.wxml-->
+<view class='goodsList'>
+    <view class='good' wx:for="{{goodsList}}" wx:key="{{index}}">
+        <view class='selor-info'>
+            <image src='../../image/icons/store.png'></image>
+            <text>{{item.storeName}}</text>
+            <span>{{item.renZheng}}</span>
+            <image src='../../image/icons/delate.png'></image>
+        </view>
+        <view class='good-detail'>
+            <!-- <image src='{{choose[index] == item.num ? redchecked:checked}}' class='checkbox' data-current='{{index}}' catchtouchend='choose'></image> -->
+            <image src='{{item.image_url}}'></image>
+            <text class='title'>{{item.title}}</text>
+            <text class='newPrice'>￥{{item.newPrice}}</text>
+            <text class='oldPrice'>￥{{item.oldPrice}}</text>
+            <text class='pay' bindtap='pay'>立即支付</text>
+        </view>
+    </view>
+</view>
+
+<!-- <view class='buy'>
+    <span>共 {{goodNum || 0}} 件商品：</span>
+    <text>￥{{lastPrice || 0}}</text>
+    <view class='submit' catchtouchend='submit'>结算</view>
+</view> -->

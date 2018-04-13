@@ -1,0 +1,68 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/zhuanlan/zhuanlan",
+        
+        "pages/cart/cart",
+        "pages/mine/mine",
+        "pages/address/address",
+        
+        "pages/order/wuliu/wuliu",
+        
+        "pages/order/order",
+        
+        
+        "pages/order/payOrder/payOrder",
+        "pages/order/takeOrder/takeOrder",
+        "pages/help/help",
+        
+        "pages/address/newAddress/newAddress",
+        
+        
+        
+        "pages/seller/fans/fans",
+        "pages/seller/seller",
+        "pages/goodsDetail/goodsDetail",
+        
+        "pages/category/category",
+        "pages/logs/logs",
+        "pages/help/helpDetail/helpDetail"
+        
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "TWOPLUS",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "selectedColor": "#ec6065",
+        "backgroundColor": "#fff",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "iconPath": "image/icons/icon_home.png",
+                "selectedIconPath": "image/icons/redhome.png",
+                "text": "首 页"
+            },
+            {
+                "pagePath": "pages/category/category",
+                "iconPath": "image/icons/category.png",
+                "selectedIconPath": "image/icons/redcate.png",
+                "text": "分 类"
+            },
+            {
+                "pagePath": "pages/cart/cart",
+                "iconPath": "image/icons/cart.png",
+                "selectedIconPath": "image/icons/redcart.png",
+                "text": "购物车"
+            },
+            {
+                "pagePath": "pages/mine/mine",
+                "iconPath": "image/icons/mine.png",
+                "selectedIconPath": "image/icons/redmine.png",
+                "text": "我 的"
+            }
+        ]
+    }
+}

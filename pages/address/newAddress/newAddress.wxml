@@ -1,0 +1,24 @@
+<!--pages/address/newaddress/newaddress.wxml-->
+<view>
+    <form>
+        <view>
+            <text>收货人</text>
+            <input placeholder='姓名' data-current='0' bindinput='input' value='{{address.name}}' focus='false'></input>
+        </view>
+        <view>
+            <text>手机号</text>
+            <input data-current='1' bindinput='input' placeholder='收货人电话号码' value='{{address.tel}}'></input>
+        </view>
+        <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+            <text>省市区</text>
+
+            <input data-current='2' bindinput='input' placeholder='省、市、区' value='{{region[0]}}{{region[1]}}{{region[2]}}'></input>
+        </picker>
+        <view>
+            <text>详细地址</text>
+            <input data-current='3' bindinput='input' placeholder='请填写详细地址' value='{{address.address}}'></input>
+        </view>
+        <view class='button' form-type='submit' catchtouchend='submit'>保存</view>
+    </form>
+
+</view>

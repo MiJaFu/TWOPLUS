@@ -1,0 +1,215 @@
+/* pages/seller/seller.wxss */
+
+.seller {
+    padding: 12rpx 38rpx;
+    position: relative;
+    background-color: #f2f2f2;
+}
+
+.seller .seller-img {
+    margin-right: 20rpx;
+    float: left;
+}
+
+.seller .seller-img image {
+    width: 100rpx;
+    height: 100rpx;
+    background-color: #000;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.seller .seller-img text {
+    position: absolute;
+    top: 90rpx;
+    left: 30rpx;
+    display: block;
+    width: 116rpx;
+    height: 36rpx;
+    line-height: 36rpx;
+    font-size: 20rpx;
+    font-weight: bold;
+    color: #fff;
+    background-color: #009688;
+    text-align: center;
+    border-radius: 18rpx;
+}
+
+.seller-info {
+    position: relativel;
+    margin-top: 10rpx;
+}
+.seller-info .cart{
+    position: absolute;
+    top: 50rpx;
+    right: 70rpx;
+    width: 45rpx;
+    height: 45rpx;
+    background-color: #999;
+}
+.seller .seller-name {
+    line-height: 50rpx;
+    font-size: 28rpx;
+    font-weight: bold;
+}
+
+.seller-info view:nth-child(2) icon {
+    margin-right: 10rpx;
+    display: inline-block;
+    width: 28rpx;
+    height: 28rpx;
+    background-color: #ec6065;
+}
+
+.seller .describe {
+    margin-top: 26rpx;
+    margin-bottom: 22rpx;
+    font-size: 24rpx;
+}
+
+.seller .ul {
+    width: 100%;
+    overflow: hidden;
+}
+
+.seller .li {
+    position: relative;
+    float: left;
+    width: 25%;
+    font-size: 32rpx;
+    text-align: center;
+}
+
+.seller .li view:nth-child(2) {
+    font-size: 28rpx;
+}
+
+.seller .li .line {
+    position: absolute;
+    top: 25rpx;
+    right: 0;
+    width: 2rpx;
+    height: 50rpx;
+    background-color: #cecece;
+}
+
+.seller .li:last-child .line {
+    display: none;
+}
+
+.checked {
+    color: #ec6065;
+    font-weight: bold;
+}
+.up{
+    background: #ec6065!important;
+}
+.down{
+    background: #ec6065!important;
+}
+.goods {
+    margin-top: 28rpx;
+}
+
+.goods .option {
+    overflow: hidden;
+    background-color: #f2f2f2;
+}
+
+.goods .option>view {
+    padding: 34rpx 0 32rpx 0;
+    float: left;
+    width: 33%;
+    font-size: 28rpx;
+    text-align: center;
+}
+
+.option>view text {
+    display: inline-block;
+    width: 100%;
+    line-height: 26rpx;
+    border-right: 2rpx solid #cecece;
+}
+
+.option>view:last-child {
+    position: relative;
+}
+
+.option>view:last-child text {
+    width: auto;
+    border: unset;
+}
+
+.option view:last-child view {
+    position: absolute;
+    top: 26rpx;
+    right: 50rpx;
+    display: inline-block;
+    width: 40rpx;
+    line-height: 26rpx;
+}
+
+.option view:last-child icon {
+    display: inline-block;
+    width: 40rpx;
+    height: 20rpx;
+    background: #000;
+}
+
+#goodsList {
+    margin-left: 44rpx;
+    margin-bottom: 100rpx;
+    overflow: hidden;
+}
+
+#goodsList .good {
+    position: relative;
+    float: left;
+    margin-right: 26rpx;
+    margin-bottom: 48rpx;
+    width: 320rpx;
+    background-color: #f2f2f2;
+}
+
+#goodsList .good  span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 136rpx;
+    height: 52rpx;
+    line-height: 52rpx;
+    text-align: center;
+    font-size: 24rpx;
+    color: #fff;
+    background-color: #ec6065;
+}
+
+#goodsList .good .collect {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 90rpx;
+    height: 90rpx;
+    background-color: #dedede;
+}
+
+#goodsList .good image {
+    margin-bottom: 10rpx;
+    width: 320rpx;
+    height: 320rpx;
+    background-color: #000;
+    vertical-align: middle;
+}
+
+#goodsList .good text {
+    display: block;
+    padding-left: 10rpx;
+    line-height: 46rpx;
+    color: #101010;
+    font-size: 24rpx;
+}
+
+#goodsList .good .price {
+    font-size: 28rpx;
+    color: #ec6065;
+}

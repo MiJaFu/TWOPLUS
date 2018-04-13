@@ -1,0 +1,86 @@
+<!-- <list /> -->
+<!--轮播图  -->
+<scroll-view scroll-y="true" bindscroll="scroll" bindscrolltolower="lower">
+    <view>
+        <swiper autoplay="true" duration="500" indicator-dots="true" circular="true" interval="5000">
+            <block wx:for="{{src}}" wx:key="{{index}}">
+                <swiper-item>
+                    <image src="{{item}}" class="slide-image" id="swiperImg" />
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+    <!--导航  -->
+    <view id="nav">
+        <view class='navigator' data-nav="0" bindtap='nav'>
+            <image src='../../image/icons/temai.png'></image>
+            <text>特卖</text>
+        </view>
+        <view class='navigator' data-nav="1" bindtap='nav'>
+            <image src='../../image/icons/shangxin.png'></image>
+            <text>上新</text>
+        </view>
+        <view class='navigator' data-nav="2" bindtap='nav'>
+            <image src='../../image/icons/ruzhu.png'></image>
+            <text>入驻</text>
+        </view>
+        <view class='navigator' data-nav="3" bindtap='nav'>
+            <image src='../../image/icons/yanghu.png'></image>
+            <text>养护</text>
+        </view>
+    </view>
+
+    <!--好货推荐  -->
+    <view id="category">
+        <view class='navigator' data-cate="0" bindtap='zhuanlan'>
+            <icon></icon>
+            <text>箱包</text>
+            <image src='../../image/icons/indexcate.png'></image>
+        </view>
+        <view class='navigator' data-cate="1" bindtap='zhuanlan'>
+            <icon></icon>
+            <text>钟表</text>
+            <image src='../../image/icons/indexcate1.png'></image>
+        </view>
+        <view class='navigator' data-cate="2" bindtap='zhuanlan'>
+            <icon></icon>
+            <text>重奢</text>
+            <image src='../../image/icons/indexcate1.png'></image>
+        </view>
+        <view class='navigator' data-cate="3" bindtap='zhuanlan'>
+            <icon></icon>
+            <text>轻奢</text>
+            <image src='../../image/icons/indexcate.png'></image>
+        </view>
+    </view>
+
+    <view id="recommend">
+        <text>好货推荐</text>
+        <view class='replace {{position == true?"block":""}}'></view>
+        <scroll-view scroll-x="true" scroll-left="0" class='{{position == true?"fixed":""}}'>
+            <view class=' {{current == 999?"bold":""}}' bindtap='cate' data-current='999'>
+                全部
+            </view>
+
+            <block wx:for="{{cateList}}" wx:key="{{index}}">
+                <view class=' {{current == index?"bold":""}}' bindtap='cate' data-current='{{index}}'>
+                    {{item.name}}
+                </view>
+            </block>
+        </scroll-view>
+        <view id="goodsList">
+            <block wx:for="{{goodsList}}" wx:key="{{index}}">
+                <view class="good navigator" bindtap='togoodsDetail' data-goods="{{item.id}}">
+                    <span class="{{item.price-item.nowPrice}}==0?'hide':''">降价{{item.price-item.nowPrice}}</span>
+                    <view>
+                        <image src='{{item.headImg}}'></image>
+                        <!-- <text>{{item.title}}</text> -->
+                        <text>{{item.title}}</text>
+                        <text class="price">￥{{item.price}}</text>
+                    </view>
+                    <image class='collect' src='{{item.love == 0?redlove:love}}' catchtap='love' data-love="{{index}}"></image>
+                </view>
+            </block>
+        </view>
+    </view>
+</scroll-view>

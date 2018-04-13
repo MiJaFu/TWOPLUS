@@ -1,0 +1,325 @@
+/* pages/goodsDetail/goodsDetail.wxss */
+
+view, text, b {
+    font-family: Arial;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+swiper {
+    width: 750rpx;
+    height: 384rpx;
+}
+
+swiper-item {
+    width: 750rpx;
+}
+
+image {
+    width: 100%;
+    height: 384rpx;
+}
+
+.goodDesc {
+    width: 750rpx;
+    padding: 28rpx 32rpx 0 40rpx;
+    box-sizing: border-box;
+}
+
+.line {
+    width: 658rpx;
+}
+
+.goodDesc .chengse, .title {
+    font-size: 28rpx;
+    color: #101010;
+}
+
+.goodDesc .chengse {
+    margin-right: 30rpx;
+}
+
+.goodDesc .newPrice {
+    margin-right: 15rpx;
+    font-size: 36rpx;
+    color: #ec6065;
+}
+
+.goodDesc .oldPrice {
+    font-size: 24rpx;
+    color: #ccc;
+    text-decoration: line-through;
+}
+
+.goodDesc .describe {
+    padding: 24rpx 12rpx 34rpx 16rpx;
+    display: block;
+    width: 100%;
+    font-size: 26rpx;
+    background-color: #f2f2f2;
+    border: 1rpx dashed #ccc;
+    border-radius: 10rpx;
+    box-sizing: border-box;
+}
+
+.credit {
+    margin-top: 36rpx;
+    width: 100%;
+    height: 174rpx;
+    border-top: 4rpx solid #dedede;
+    overflow: hidden;
+}
+
+.credit-item {
+    float: left;
+    width: 25%;
+    font-size: 20rpx;
+    text-align: center;
+    color: #101010;
+}
+
+.credit-item image {
+    margin: 0 auto;
+    margin-top: 40rpx;
+    display: block;
+    width: 52rpx;
+    height: 62rpx;
+}
+
+.seller {
+    position: relative;
+    height: 174rpx;
+}
+
+.seller .seller-img {
+    margin-right: 20rpx;
+    float: left;
+}
+
+.seller .seller-img image {
+    width: 100rpx;
+    height: 100rpx;
+    background-color: #000;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.seller .seller-img text {
+    position: absolute;
+    top: 74rpx;
+    left: -8rpx;
+    display: block;
+    width: 116rpx;
+    height: 36rpx;
+    line-height: 36rpx;
+    font-size: 20rpx;
+    font-weight: bold;
+    color: #fff;
+    background-color: #009688;
+    text-align: center;
+}
+
+.seller-info {
+    margin-top: 10rpx;
+}
+
+.seller .seller-name {
+    line-height: 50rpx;
+    font-size: 28rpx;
+    font-weight: bold;
+}
+
+.seller-info .seller-credit {
+    margin-left: 38rpx;
+    width: 34rpx;
+    height: 34rpx;
+    vertical-align: middle;
+}
+
+.seller-info view:nth-child(2) text {
+    margin-right: 30rpx;
+    font-size: 24rpx;
+}
+
+.seller .go {
+    position: absolute;
+    top: 30rpx;
+    right: 0;
+    width: 22rpx;
+    height: 30rpx;
+}
+
+.interval {
+    width: 750rpx;
+    height: 50rpx;
+    background-color: #f2f2f2;
+}
+
+.good-detail {
+    padding: 120rpx 32rpx 36rpx 40rpx;
+    position: relative;
+    width: 750rpx;
+    box-sizing: border-box;
+}
+
+.good-detail>text:first-child {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 258rpx;
+    height: 66rpx;
+    line-height: 66rpx;
+    text-align: center;
+    font-size: 26rpx;
+    background-color: #ec6065;
+}
+
+.good-detail .describe text {
+    display: block;
+    font-size: 28rpx;
+    line-height: 48rpx;
+}
+
+.good-detail .describe {
+    margin-bottom: 126rpx;
+}
+
+.good-detail .unfold, .good-detail .packUp {
+    padding-left: 50rpx;
+    margin: 0 auto;
+    margin-bottom: 44rpx;
+    width: 282rpx;
+    height: 68rpx;
+    font-size: 28rpx;
+    line-height: 68rpx;
+    border: 1rpx solid #ec6065;
+    background-color: #f2f2f2;
+    box-sizing: border-box;
+}
+
+.good-detail .packUp {
+    padding-left: 92rpx;
+    margin-top: 44rpx;
+}
+
+.good-detail .goodImages {
+    width: 100%;
+}
+
+.similarProducts>text {
+    /* padding-left: 40rpx; */
+    margin-bottom: 44rpx;
+    display: block;
+    text-align: center;
+    font-size: 28rpx;
+    box-sizing: border-box;
+}
+
+#goodsList {
+    margin-left: 44rpx;
+    margin-bottom: 100rpx;
+    overflow: hidden;
+}
+
+#goodsList .good {
+    position: relative;
+    float: left;
+    margin-right: 26rpx;
+    margin-bottom: 48rpx;
+    width: 320rpx;
+    background-color: #f2f2f2;
+}
+
+#goodsList .good  span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 136rpx;
+    height: 52rpx;
+    line-height: 52rpx;
+    text-align: center;
+    font-size: 24rpx;
+    color: #fff;
+    background-color: #ec6065;
+}
+
+#goodsList .good image {
+    margin-bottom: 10rpx;
+    width: 320rpx;
+    height: 320rpx;
+    background-color: #000;
+    vertical-align: middle;
+}
+
+#goodsList .good .collect {
+    position: absolute;
+    bottom: 20rpx;
+    right: 36rpx;
+    width: 40rpx;
+    height: 40rpx;
+    background-color: #dedede;
+}
+
+#goodsList .good text {
+    display: block;
+    padding-left: 10rpx;
+    width: 100%;
+    line-height: 46rpx;
+    color: #101010;
+    font-size: 24rpx;
+    overflow: hidden; /*内容超出后隐藏*/
+    text-overflow: ellipsis; /* 超出内容显示为省略号*/
+    white-space: nowrap; /*文本不进行换行*/
+    box-sizing: border-box;
+}
+
+#goodsList .good .price {
+    font-size: 28rpx;
+    color: #ec6065;
+}
+
+#menu {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 750rpx;
+    height: 90rpx;
+    background: #fff;
+    border-top: 1rpx solid #dedede;
+}
+
+#menu .tocart {
+    margin-right: 58rpx;
+    float: right;
+    text-align: center;
+}
+
+#menu .tocart image {
+    margin-top: 8rpx;
+    width: 48rpx;
+    height: 40rpx;
+    vertical-align: middle;
+}
+
+#menu .tocart text {
+    display: block;
+    font-size: 24rpx;
+}
+
+#menu .buy {
+    float: right;
+    width: 262rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+    background-color: #ec6065;
+    font-size: 32rpx;
+    text-align: center;
+    color: #fff;
+}

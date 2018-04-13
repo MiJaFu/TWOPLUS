@@ -1,0 +1,32 @@
+<!--pages/order/wuliu/wuliu.wxml-->
+<view class='goods'>
+    <view class='seller'>
+        <text class='seller-name'>{{goodsInfo.sellerName}}</text>
+        <span class="Bgcyan">{{goodsInfo.renzheng}}</span>
+        <text>{{goodsInfo.state}}</text>
+    </view>
+    <view class='goodsInfo'>
+        <view class='goodsList' wx:for="{{goodsInfo.goods}}" wx:key="{{index}}">
+            <image src='{{item.img_url}}'></image>
+            <view>
+                <text class='title'>{{item.title}}</text>
+                <text class='count'>x{{item.count}}</text>
+                <text class='price'>￥{{item.price}}</text>
+            </view>
+        </view>
+        <view class='Settlement'>
+            <text class='last-count'>共4件商品</text>
+            <text class='last-price'>实付款：￥400000.00</text>
+        </view>
+    </view>
+</view>
+
+<view class='wuliu'>
+    <view class='title'>物流信息</view>
+    <view class='company'>快递公司：顺丰速运</view>
+    <view class='company num'>快递单号：123456789123</view>
+
+    <view>12/26  09:45  快递已揽件</view>
+    <view>12/26  13:45  快递已从广州分拨中心发出</view>
+
+</view>

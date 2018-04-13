@@ -1,0 +1,119 @@
+<!--pages/seller/seller.wxml-->
+<view class='seller'>
+    <view class='seller-img'>
+        <image></image>
+        <text>实名认证</text>
+    </view>
+    <view class='seller-info'>
+        <view>
+            <text class='seller-name'>广州王小二</text>
+        </view>
+        <view>
+            <icon></icon>
+            <icon></icon>
+            <icon></icon>
+            <icon></icon>
+            <icon></icon>
+        </view>
+        <view class='cart'>
+            <icon></icon>
+        </view>
+    </view>
+    <view class='describe'>
+        这几天本店搞活动全场5折包邮再送1000元优惠券，超级低价一定要赶紧下单，错过后悔哦！
+    </view>
+    <view class='ul'>
+        <view class='li' catchtouchend='seller_other' data-other='0'>
+            <view>
+                <b>0</b>
+            </view>
+            <view>粉丝</view>
+            <view class='line'></view>
+        </view>
+        <view class='li' catchtouchend='seller_other' data-other='1'>
+            <view>
+                <b>0</b>
+            </view>
+            <view>在售</view>
+            <view class='line'></view>
+        </view>
+        <view class='li' catchtouchend='seller_other' data-other='2'>
+            <view>
+                <b>0</b>
+            </view>
+            <view>成交</view>
+            <view class='line'></view>
+        </view>
+        <view class='li' catchtouchend='seller_other' data-other='3'>
+            <view>
+                <b>0</b>
+            </view>
+            <view>评价</view>
+            <view class='line'></view>
+        </view>
+    </view>
+</view>
+
+<!--卖家商品  -->
+<view class='goods'>
+    <view class='option'>
+        <view catchtouchend='checked' data-current="0">
+            <text class='{{ischecked == 0?"checked":""}}'>默认</text>
+        </view>
+        <view catchtouchend='checked' data-current="1">
+            <text class='{{ischecked == 1?"checked":""}}'>最新</text>
+        </view>
+        <view catchtouchend='checked' data-current="2">
+            <text class='{{ischecked == 2?"checked":""}}'>价格</text>
+            <view>
+                <icon class='{{priceUp == true?"up":""}}'></icon>
+                <icon class='{{priceUp == false?"down":""}}'></icon>
+            </view>
+        </view>
+    </view>
+
+    <view class='similarProducts'>
+        <view id="goodsList">
+            <navigator class="good">
+                <span>降价2K</span>
+                <view>
+                    <image></image>
+                    <text>99新 GUCCI</text>
+                    <text>单肩包</text>
+                    <text class="price">￥13800</text>
+                </view>
+                <icon class='collect'></icon>
+            </navigator>
+            <navigator class="good">
+                <span>降价2K</span>
+                <view>
+                    <image></image>
+                    <text>99新 GUCCI</text>
+                    <text>单肩包</text>
+                    <text class="price">￥13800</text>
+                </view>
+                <icon class='collect'></icon>
+            </navigator>
+            <navigator class="good">
+                <span>降价2K</span>
+                <view>
+                    <image></image>
+                    <text>99新 GUCCI</text>
+                    <text>单肩包</text>
+                    <text class="price">￥13800</text>
+                </view>
+                <icon class='collect'></icon>
+            </navigator>
+            <navigator class="good">
+                <span>降价2K</span>
+                <view>
+                    <image></image>
+                    <text>99新 GUCCI</text>
+                    <text>单肩包</text>
+                    <text class="price">￥13800</text>
+                </view>
+                <icon class='collect'></icon>
+            </navigator>
+        </view>
+    </view>
+</view>

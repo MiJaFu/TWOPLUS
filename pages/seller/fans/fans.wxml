@@ -1,0 +1,12 @@
+<!--pages/seller/fans/fans.wxml-->
+<view class='fansView' wx:for="{{fansList}}" wx:key="{{index}}">
+    <image src='{{item.img_url}}'></image>
+    <view>
+        <view>
+            <text class='nickName'>{{item.nickName}}</text>
+            <text class='vip_grade Bgorange'>{{item.vip_grade}}</text>
+        </view>
+        <view>{{item.signature}}</view>
+    </view>
+
+</view>

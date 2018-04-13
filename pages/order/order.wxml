@@ -1,0 +1,59 @@
+<!--pages/order/order.wxml-->
+
+<scroll-view scroll-x="true" scroll-left="300" class='option'>
+    <view class='{{checked == 6?"checked":""}}' data-current='6' bindtap='option'>全部</view>
+    <view class='{{checked == 0?"checked":""}}' data-current='0' bindtap='option'>待付款</view>
+    <view class='{{checked == 1?"checked":""}}' data-current='1' bindtap='option'>待发货</view>
+    <view class='{{checked == 2?"checked":""}}' data-current='2' bindtap='option'>待收货</view>
+    <view class='{{checked == 3?"checked":""}}' data-current='3' bindtap='option'>已收货</view>
+    <view class='{{checked == 4?"checked":""}}' data-current='4' bindtap='option'>退款</view>
+</scroll-view>
+
+<!--卖家与商品  -->
+<!--待付款  -->
+<view class='goods' wx:for="{{order}}" wx:key="{{index}}">
+    <view class='seller'>
+        <text class='seller-name'>{{item.sellerName}}</text>
+        <span class="Bgcyan">{{item.renzheng}}</span>
+        <text>{{item.state}}</text>
+    </view>
+    <view class='goodsInfo'>
+        <view class='goodsList' wx:for-index="idx" wx:for-item="goods" wx:for="{{item.goods}}" wx:key="{{idx}}">
+            <image src='{{goods.img_url}}'></image>
+            <view>
+                <text class='title'>{{goods.title}}</text>
+                <text class='count'>x{{goods.count}}</text>
+                <text class='price'>￥{{goods.price}}</text>
+            </view>
+        </view>
+        <view class='Settlement'>
+            <text class='last-count'>共4件商品</text>
+            <text class='last-price'>实付款：￥400000.00</text>
+        </view>
+        <view class='action'>
+            <view class='timer {{item.status == 0?"show":"hide"}}'>剩余支付时间：
+                <text>15</text>:
+                <text>00</text>
+            </view>
+            <view class='actionBtn'>
+                <!--待付款  -->
+
+                <span class="pay Bgred  {{item.status == 0?'show':'hide'}}" data-action="pay" data-ordernum="{{item.orderNum}}" bindtap="action">确认付款</span>
+                <span class="cancel {{item.status == 0?'show':'hide'}}" data-action="cancel" data-ordernum="{{item.orderNum}}" bindtap="action">取消订单</span>
+
+                <!--待发货  -->
+                <span class="service Bgred {{item.status == 1?'show':'hide'}}" data-action="service" data-ordernum="{{item.orderNum}}" bindtap="action">联系客服</span>
+                <!--待收货  -->
+
+                <span class="receive Bgred {{item.status == 2?'show':'hide'}}" data-action="receive" data-ordernum="{{item.orderNum}}" bindtap="action">确认收货</span>
+                <span class="log {{item.status == 2?'show':'hide'}}" data-action="log" data-ordernum="{{item.orderNum}}" bindtap="action">详细物流</span>
+                <!--交易完成  -->
+                <span class="delate {{item.status == 3?'show':'hide'}}" data-action="delate" data-ordernum="{{item.orderNum}}" bindtap="action">删除订单</span>
+
+            </view>
+            <view class="tuikuan {{item.status == 4?'show':'hide'}}">平台反馈：</view>
+            <view class="tuikuan reason {{item.status == 4?'block':'hide'}}">退款理由：【鉴定未通过】.......</view>
+            <span class="service Bgred {{item.status == 4?'block':'hide'}}" data-action="service" data-ordernum="{{item.orderNum}}" bindtap="action">联系客服</span>
+        </view>
+    </view>
+</view>

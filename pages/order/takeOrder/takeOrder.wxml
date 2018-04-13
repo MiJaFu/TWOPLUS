@@ -1,0 +1,66 @@
+<!--pages/order/takeOrder/takeOrder.wxml-->
+<view class='addressContent'>
+    <text>收货地址</text>
+    <view class='addAddress {{block == true?"block":"hide"}}' bindtap='addAddress'>
+        <image src='../../../image/icons/add.png'></image>
+        <text>添加地址</text>
+    </view>
+    <view class='address {{block == false?"block":"hide"}}'>
+        <image src='../../../image/icons/address.png'></image>
+        <text class='userName'>{{address.name}}</text>
+        <text class='tel'>{{address.tel}}</text>
+        <text class='addressDetail'>{{address.province}}{{address.city}}{{address.district}}{{address.address}}</text>
+    </view>
+</view>
+<view class='goods'>
+    <view class='seller'>
+        <image src='../../../image/icons/store.png'></image>
+        <text class='seller-name'>卖家名称卖家名称</text>
+        <span class="Bgcyan">实名认证</span>
+
+    </view>
+    <view class='goodsInfo'>
+        <view class='goodsList'>
+            <image src=''></image>
+            <view>
+                <text class='title'>商品标题商品标题</text>
+                <text class='count'>x100</text>
+                <text class='price'>￥10000000.00</text>
+            </view>
+        </view>
+        <view class='quan'>
+            <text>优惠券抵扣</text>
+            <view class='count'>
+                <text>0张可用</text>
+                <image src='../../../image/icons/go.png'></image>
+            </view>
+        </view>
+        <view class='yunfei'>
+            <text>运费</text>
+            <text>￥0</text>
+        </view>
+        <view class='Settlement'>
+            <text class='last-count'>共100件商品</text>
+            <text class='last-price'>实付款：￥400000.00</text>
+        </view>
+    </view>
+    <view class='bottom'>
+        <view class='hongbao'>
+            <text>红包</text>
+            <view class='count'>
+                <text>0张可用</text>
+                <image src='../../../image/icons/go.png'></image>
+            </view>
+        </view>
+        <view class='save'>
+            <text>已节省</text>
+            <text>￥0</text>
+        </view>
+    </view>
+</view>
+
+<view class='actionOrder'>
+    <text>共1件商品，合计：</text>
+    <b>￥100000.00</b>
+    <button bindtap='submit'>提交订单</button>
+</view>
